@@ -3,20 +3,24 @@ import { useState } from "react"
 
 
 export default function App() {
-    const [content, setContent] = useState("dinesh not clickd")
 
 
-function handleClick() {
-    setContent("dinesh is clicked")
+  let [count, setCount] = useState(0)
 
-}
 
-    return (
-        <>
+  function handleClick() {
+    setCount(count+1)
+  }
 
-        <h1>{content}</h1>
 
-        <button onClick={handleClick}>click</button>
-        </>
-    )
+  return (
+
+    <>
+
+    <h1>Counter: {count}</h1>
+
+    <button onClick={handleClick}>Click</button>
+    
+    </>
+  )
 }
